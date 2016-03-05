@@ -1,7 +1,9 @@
 #!/bin/bash 
 #File requies a variable $JAVADIR to be passed to it
-#JAVADIR=/usr/java/ #Should be commented out after testing
-
+#Default if not passed to the script will install to /usr/java
+if [ -z "$JAVADIR" ]; then
+  JAVADIR=/usr/java
+fi
 
 mkdir -p $JAVADIR
 cd $JAVADIR
