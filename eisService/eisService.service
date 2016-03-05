@@ -1,0 +1,18 @@
+#This should go in /etc/systemd/system
+
+[Unit]
+Description=Ellucian Identity Server
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=eisserviceuser
+WorkingDirectory=~
+ExecStart=/u01/ellucian/EllucianIdentityService/bin/eisService.sh start
+ExecStop=/u01/ellucian/EllucianIdentityService/bin/eisService.sh stop
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

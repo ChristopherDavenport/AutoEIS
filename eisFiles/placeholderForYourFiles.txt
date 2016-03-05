@@ -1,0 +1,5 @@
+These should be labeled exactly as they are unpacked from the ellucian.
+
+EllucianIdentityService-1.1.0
+EllucianIdentityService_patch-1.1.1
+EllucianIdentityService_patch-1.1.2
